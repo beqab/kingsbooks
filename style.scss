@@ -231,3 +231,125 @@ header .navbar {
          left: 19%;
      }
 }
+.mane_page_section{
+  
+  article{
+     box-shadow: 0px 0px 7px rgba(0,0,0, .15);
+     padding:32px 0px;
+     margin: 20px 0; 
+
+     .book_buy_item{
+      position: relative;
+      max-width: 148px;
+  
+             &:hover .hoverbg{
+                  display: block;
+                  opacity: 1;
+             }
+
+      .hoverbg{
+           position: absolute;
+           transition:0.3s;
+           opacity: 0;
+    height: calc(100% );
+    width: calc(100% );
+    /* margin: 14px; */
+    transform: translate(-50%, -50%);
+    display: none;
+    left: 50%;
+    top: 50%;
+    background: #2e658354;
+      }
+          .hover_block{
+              position: absolute;
+    left: 0;
+    top: 0;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    /* margin: 14px; */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    // background: #2E6583;
+    border: 1px solid #E5AF1A;
+           img{
+          margin-top: 18px;
+           }
+
+           span{
+              color: #E2AE2E;
+              font-size: 20px;
+              margin-top: 20px;
+              margin-bottom: 17px;
+              font-weight: bold;
+           }
+
+           a{
+              font-size: 10px;
+              background: #fff;
+              padding: 4px 8px 5px;
+              border-radius: 4px;
+              color: #000; 
+
+               &.buy{
+                background: #E2AE2E;
+                margin-bottom: 7px;
+               }
+           }
+
+          }
+     }
+
+  }
+   h3{
+      color: #336A7E;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 55px;
+     }
+}
+
+footer{
+  background: #2E6583;
+  padding: 25px 0 35px;
+  ul li{
+       font-size: 15px;
+       color: #fff;
+       margin-bottom: 15px;
+       display: flex;
+
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        img{
+          margin-right: 14px;
+        }
+  }
+  .right_side{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .social_icons{
+
+      border-bottom: 1px solid #fff;
+      padding: 0 20px;
+
+      a{
+      color: #fff;
+      font-size: 32px;
+      margin-left: 10px;
+         &:hover{
+            text-decoration: unset;
+         }
+      }
+
+    }
+     p{
+         color: #fff;
+      }
+
+  }
+}

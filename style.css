@@ -168,4 +168,89 @@ header .navbar form button {
     top: 50%;
     left: 19%; }
 
+.mane_page_section article {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+  padding: 32px 0px;
+  margin: 20px 0; }
+  .mane_page_section article .book_buy_item {
+    position: relative;
+    max-width: 148px; }
+    .mane_page_section article .book_buy_item:hover .hoverbg {
+      display: block;
+      opacity: 1; }
+    .mane_page_section article .book_buy_item .hoverbg {
+      position: absolute;
+      transition: 0.3s;
+      opacity: 0;
+      height: calc(100% );
+      width: calc(100% );
+      /* margin: 14px; */
+      transform: translate(-50%, -50%);
+      display: none;
+      left: 50%;
+      top: 50%;
+      background: #2e658354; }
+    .mane_page_section article .book_buy_item .hover_block {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      /* margin: 14px; */
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      border: 1px solid #E5AF1A; }
+      .mane_page_section article .book_buy_item .hover_block img {
+        margin-top: 18px; }
+      .mane_page_section article .book_buy_item .hover_block span {
+        color: #E2AE2E;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 17px;
+        font-weight: bold; }
+      .mane_page_section article .book_buy_item .hover_block a {
+        font-size: 10px;
+        background: #fff;
+        padding: 4px 8px 5px;
+        border-radius: 4px;
+        color: #000; }
+        .mane_page_section article .book_buy_item .hover_block a.buy {
+          background: #E2AE2E;
+          margin-bottom: 7px; }
+.mane_page_section h3 {
+  color: #336A7E;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 55px; }
+
+footer {
+  background: #2E6583;
+  padding: 25px 0 35px; }
+  footer ul li {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 15px;
+    display: flex; }
+    footer ul li:last-child {
+      margin-bottom: 0; }
+    footer ul li img {
+      margin-right: 14px; }
+  footer .right_side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end; }
+    footer .right_side .social_icons {
+      border-bottom: 1px solid #fff;
+      padding: 0 20px; }
+      footer .right_side .social_icons a {
+        color: #fff;
+        font-size: 32px;
+        margin-left: 10px; }
+        footer .right_side .social_icons a:hover {
+          text-decoration: unset; }
+    footer .right_side p {
+      color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
