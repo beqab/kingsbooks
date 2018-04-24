@@ -107,4 +107,65 @@ header .navbar form button {
       left: 50%;
       top: 50%; }
 
+.slider_bg {
+  background: url(images/sliderbg.png);
+  background-position: center;
+  /* background: red; */
+  overflow: hidden;
+  background-size: cover; }
+  .slider_bg .left.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 47px;
+    color: #F5973B; }
+  .slider_bg .right.carousel-control {
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    transform: translate(-50%, -50%);
+    font-size: 47px;
+    color: #F5973B; }
+  .slider_bg .carousel-caption {
+    position: absolute;
+    right: 10%;
+    top: 14%;
+    text-align: center; }
+    .slider_bg .carousel-caption h3 {
+      font-size: 18px; }
+    .slider_bg .carousel-caption .slider_title_continue {
+      font-size: 20px; }
+    .slider_bg .carousel-caption .old_price {
+      color: #FFB200;
+      font-size: 29px;
+      display: inline-block;
+      position: relative;
+      margin-top: 40px; }
+      .slider_bg .carousel-caption .old_price:before {
+        position: absolute;
+        content: '';
+        transform: translate(-50%, -50%) rotate(12deg);
+        left: 61px;
+        top: 21px;
+        height: 4px;
+        width: 100%;
+        background: #CA293A; }
+    .slider_bg .carousel-caption .new_price {
+      font-size: 34px;
+      color: #F5973B;
+      border: 1px solid #F5973B;
+      border-radius: 50px;
+      padding: 8px 30px 10px;
+      background: #fff;
+      text-align: left;
+      right: 0px;
+      position: relative;
+      width: 1000px;
+      margin-top: 34px; }
+  .slider_bg .slider_img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 19%; }
+
 /*# sourceMappingURL=style.css.map */
