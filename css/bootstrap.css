@@ -3851,7 +3851,8 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  margin-bottom: 7px;
+  padding: 0.3rem 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -3877,7 +3878,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  /* border-color: #e9ecef #e9ecef #dee2e6; */
 }
 
 .nav-tabs .nav-link.disabled {
@@ -3888,9 +3889,11 @@ tbody.collapse.show {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
+  color: #2E6583;
+  font-weight:  bold;
+  border-bottom: 1px solid #2E6583;
   background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  /* border-color: #dee2e6 #dee2e6 #fff; */
 }
 
 .nav-tabs .dropdown-menu {

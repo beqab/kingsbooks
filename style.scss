@@ -80,7 +80,7 @@ header .navbar {
 	 .navbar-nav{
 	 	 li a.active{
 
-	 	 	     padding: 0.5rem 1rem;
+	 	 	     padding: 0.3rem 1rem;
     display: inline-block;
            	&:before{
            		width: 100%;
@@ -473,8 +473,13 @@ footer{
      font-weight: bold;
     }
 }
+.add_block_b{
+  transform:translateY(50px)
+}
 
 .more_books{
+
+  margin-top: 100px;
     .book_info{
 
        h4{
@@ -486,7 +491,7 @@ footer{
           font-size: 15px;
        }
      p{
-      max-width: 450px;
+      // max-width: 450px;
      }
    }
    .add_book{
@@ -533,6 +538,11 @@ footer{
          box-shadow: 0 0 6px rgba(0,0,0, .22);
          margin-top:10px;
          margin-bottom: 10px;
+             transition:0.3s;
+          &:hover{
+            background: #67ac6e;
+            border-color: #67ac6e;
+          }
       }
       .add_b{
         font-size: 15px;
@@ -541,8 +551,291 @@ footer{
          padding: 7px 21px 7px 10px;
          border: 1px solid #C6C6C6;
          box-shadow: 0 0 6px rgba(0,0,0, .22);
+
+         &:hover{
+           background: #f6bd48;
+           border-color: #f6bd48;
+         }
           img{
            margin-right: 9px;
           }
       }
+}
+.more_books_img{
+   box-shadow: 0 0 10px rgba(0,0,0, .31);
+}
+
+.coments_block{
+  margin-top: 100px;
+    .col-md-12{
+      box-shadow: 0 0 6px rgba(0,0,0, .16);
+    padding:  16px 40px;
+    margin-bottom: 10px;
+       i{
+        font-size: 34px;
+        color: #004988;
+        margin-right: 20px;
+       }
+       .name{
+          font-size: 13px;
+          margin-bottom: 6px;
+       }
+    }
+    .add_coment{
+     margin-bottom: 70px;
+       textarea{
+        width:calc(100% - 100px);
+          border:1px solid #707070;
+          border-radius: 3px;
+          padding: 5px 15px;
+          color: #212121;
+          font-size: 15px;
+       }
+       button{
+        background: #34679A;
+        font-size: 13px;
+        border: 1px solid #707070;
+        border-radius: 7px;
+        padding: 6px;
+        cursor: pointer;
+        color: #fff;
+       }
+    }
+}
+
+.registration{
+
+  margin-bottom: 120px;
+  margin-top: 40px;
+
+    ul {
+          display: flex;
+    justify-content: center;
+    li a{
+      font-size: 12px;
+      color: $color !important;
+         & .nav-link.active{
+
+      border: unset !important;
+         }
+
+    }
+    }
+.tab-content{
+  border: 1px solid #2E6583;
+}
+    
+}
+
+.login_logout{
+    input{
+         border: unset;
+    font-size: 12px;
+    color: #2E6583;
+    width: 169px;
+        &::placeholder{
+      color: #2E6583;
+
+        }
+        &:focus{
+           outline: none;
+        }
+    }
+
+    .input_out{
+      border-bottom: 1px solid #2E6583;
+             margin-bottom: 25px;
+             i{
+              padding-left: 12px;
+              padding-right: 12px;
+              color: $color;
+             }
+
+             span{
+                color: $color;
+             }
+
+    }
+    .tab-pane{
+          padding-right: 22px;
+    padding-left: 22px;
+    padding-top: 11px;
+    padding-bottom: 20px;s
+
+    form{
+      text-align: center;
+    }
+           
+           button{
+          font-size: 12px;
+          color: $color;
+          border: 1px solid $color;
+          background: transparent;
+          padding: 4px 10px;
+          border-radius: 60px;
+          cursor: pointer;
+          // margin-top: 40px;
+           }
+     .recovery_pass{
+      display: block;
+      text-align:center;
+      margin-top: 60px;
+      color: #2E6583;
+      font-size: 12px;
+     }
+    }
+    .errors{
+      height: 40px;
+      color: red;
+      font-size: 13px;
+    }
+
+}
+.produt_box_sh{
+  box-shadow: 0 0 6px rgba(0,0,0, .15);
+  background: #FCFCFC;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#Basket{
+  color: $color;
+  .book_item{
+    padding: 0 60px;
+  }
+  .book_item_title{
+    padding: 0 60px;
+    padding-top: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+  }
+  .item_price_b{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .item_price_sum{
+   font-size: 18px;
+   font-weight: bold; 
+  }
+    .delet_itemb{
+           // margin-left: 50px;
+           display: inline-block;
+           cursor: pointer;
+       }
+
+}
+.bbg{
+  padding-right: 69px;
+  margin-top: 40px;
+
+    div:last-child{
+      font-weight: bold;
+    }
+}
+.reseand_books{
+  padding-right: 69px;
+  padding-bottom: 120px;
+
+  button{
+    color: $color;
+  background: transparent;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  }
+  
+}
+.add_bookk{
+  color: #2E6583;
+    display: inline-block;
+    border: 1px solid #2E6583;
+    border-radius: 50px;
+    padding: 4px 12px;
+    i{
+      font-size: 16px;
+    }
+       i.minus_book{
+        margin-right: 16px;
+       }
+       i.plus_book{
+        margin-left: 16px;
+       }
+       input{
+            width: 25px;
+    text-align: center;
+    border: none;
+    color: #2E6583;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+       }
+
+
+}
+.balnce_section{
+  margin-top: 80px;
+  margin-bottom: 140px;
+
+   .container{
+     max-width: 850px;
+   }
+   .my_emauntbox{
+    max-width: 320px;
+    width: 100%;
+    color: $color;
+      border: 1px solid #2E6583;
+  border-radius: 5px;
+  padding: 24px 36px;
+  margin-top: 80px;
+   }
+   .payment_box{
+    max-width: 320px;
+    width: 100%;
+    color: $color;
+
+    .p_inp{
+       width: 85px;
+       height: 25px;
+       padding-left: 9px;
+       font-size: 15px;
+       border-radius: 5px;
+       border:1px solid $color;
+         color:$color;
+
+        &::placeholder{
+            color:$color;
+        }
+    }
+        .box{
+          background: #F5F5F5;
+          border: 1px solid $color;
+          border-radius: 13px;
+          padding: 15px 20px;
+          input{
+            height: 33px;
+            padding-left: 7px;
+            border: 1px solid #2E6583;
+            font-size: 12px;
+            color: $color;
+
+             &::placeholder{
+                color:$color;
+             }
+          }
+          .month,.year,.CCV{
+            width: 55px;
+          }
+          .CCVT{
+            font-size: 8px;
+            text-align: right;
+          }
+
+        }
+   }
+
+}
+.bbmt{
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
