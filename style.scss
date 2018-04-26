@@ -839,3 +839,180 @@ footer{
   margin-top: 14px;
   margin-bottom: 14px;
 }
+
+section.profile{
+   margin-top: 100px;
+   margin-bottom: 120px;
+        .balance{
+          color: $color;
+          border: 1px solid $color;
+          display: inline-block;
+          max-width: 320px;
+          width: 100%;
+          border-radius: 5px;
+          box-shadow: 0 0 5px rgba(0,0,0, .14);
+          padding: 20px 36px;
+          div{
+             font-size: 15px;
+          }
+          div.my_bal{
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+          }
+        }
+        .book_item_title{
+          padding-top: 40px !important;
+        }
+        .raodenob{
+           font-size: 13px;
+           span{
+              font-size: 16px;
+              font-weight: bold;
+           }
+        }
+        .order_history_item{
+                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    background: #FCFCFC;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 75px;
+    width: 100%;
+
+
+   
+        }
+        .order_t{
+          font-weight: bold;
+          margin-top: 40px;
+          margin-bottom: 15px;
+          padding-left: 60px;
+        }
+}
+
+section.order{
+  color: $color;
+
+
+    select{
+      height: 36px;
+       font-size: 12px;
+       padding-left: 13px;
+       border: 1px solid $color;
+       border-radius: 5px; 
+       padding-right: 13px;
+        color: $color;
+        margin-bottom: 13px !important;
+        display: inline-block;
+        margin-top: 10vh !important;
+
+          option:first-child{
+              display: none;
+          }
+    }
+    input{
+      height: 36px;
+    }
+    button{
+      background: transparent;
+      color: $color;
+      border: none;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    textarea{
+    min-height: 75px;
+    }
+     input,textarea{
+          border: 1px solid #2E6583;
+          border-radius: 4px;
+          padding-left: 5px;
+          font-size: 12px;
+          color: $color;
+           &::placeholder{
+            color:$color;
+            font-size: 12px;
+           }
+      }
+
+    .pay_method{
+
+
+
+
+       a{
+          color: $color;
+          font-size: 14px;
+       }
+       .circule{
+        width: 8px;
+        height: 8px;
+        border: 1px solid $color;
+        border-radius: 40px;
+        margin-right: 6px;
+       }
+    }
+    .procent46{
+      width: 46%;
+    }
+}
+.adgilze{
+  color: #color;
+  font-size: 14px;
+  height: 30px;
+}
+.d_none{
+  display: none !important;
+}
+#adgilze_gadaxda .circule{
+  background: $color;
+}
+
+.pop_b{
+    a{
+      color: $color;
+      font-weight: bold;
+    }
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid $color;
+  width: 100%;
+  background: #fff;
+  color: $color;
+
+}
+.cancel_pop{
+   position: absolute;
+   right: -15px;
+   top: -15px;
+   color: $color;
+   cursor: pointer;
+}
+
+
+.Success{
+    a{
+      color: $color;
+      font-weight: bold;
+    }
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid $color;
+  width: 100%;
+  background: #fff;
+  color: $color;
+
+}

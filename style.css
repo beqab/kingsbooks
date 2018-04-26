@@ -605,4 +605,141 @@ footer {
   margin-top: 14px;
   margin-bottom: 14px; }
 
+section.profile {
+  margin-top: 100px;
+  margin-bottom: 120px; }
+  section.profile .balance {
+    color: #336A7E;
+    border: 1px solid #336A7E;
+    display: inline-block;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.14);
+    padding: 20px 36px; }
+    section.profile .balance div {
+      font-size: 15px; }
+    section.profile .balance div.my_bal {
+      font-size: 19px;
+      font-weight: bold;
+      margin-top: 15px;
+      display: inline-block; }
+  section.profile .book_item_title {
+    padding-top: 40px !important; }
+  section.profile .raodenob {
+    font-size: 13px; }
+    section.profile .raodenob span {
+      font-size: 16px;
+      font-weight: bold; }
+  section.profile .order_history_item {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    background: #FCFCFC;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 75px;
+    width: 100%; }
+  section.profile .order_t {
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 60px; }
+
+section.order {
+  color: #336A7E; }
+  section.order select {
+    height: 36px;
+    font-size: 12px;
+    padding-left: 13px;
+    border: 1px solid #336A7E;
+    border-radius: 5px;
+    padding-right: 13px;
+    color: #336A7E;
+    margin-bottom: 13px !important;
+    display: inline-block;
+    margin-top: 10vh !important; }
+    section.order select option:first-child {
+      display: none; }
+  section.order input {
+    height: 36px; }
+  section.order button {
+    background: transparent;
+    color: #336A7E;
+    border: none;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 12px; }
+  section.order textarea {
+    min-height: 75px; }
+  section.order input, section.order textarea {
+    border: 1px solid #2E6583;
+    border-radius: 4px;
+    padding-left: 5px;
+    font-size: 12px;
+    color: #336A7E; }
+    section.order input::placeholder, section.order textarea::placeholder {
+      color: #336A7E;
+      font-size: 12px; }
+  section.order .pay_method a {
+    color: #336A7E;
+    font-size: 14px; }
+  section.order .pay_method .circule {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #336A7E;
+    border-radius: 40px;
+    margin-right: 6px; }
+  section.order .procent46 {
+    width: 46%; }
+
+.adgilze {
+  color: #color;
+  font-size: 14px;
+  height: 30px; }
+
+.d_none {
+  display: none !important; }
+
+#adgilze_gadaxda .circule {
+  background: #336A7E; }
+
+.pop_b {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #336A7E;
+  width: 100%;
+  background: #fff;
+  color: #336A7E; }
+  .pop_b a {
+    color: #336A7E;
+    font-weight: bold; }
+
+.cancel_pop {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  color: #336A7E;
+  cursor: pointer; }
+
+.Success {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #336A7E;
+  width: 100%;
+  background: #fff;
+  color: #336A7E; }
+  .Success a {
+    color: #336A7E;
+    font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */
