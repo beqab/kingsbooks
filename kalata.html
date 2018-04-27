@@ -24,7 +24,39 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/jssor.slider.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
 
+
+
+
+.carousel-fade .carousel-item {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: opacity .75s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+
+</style>
 </head>
 <body>
     <header>
@@ -33,22 +65,22 @@
              <div class="left_side">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                       <a class="active" href="#">წიგნები</a>
+                       <a class="active" href="index.html">წიგნები</a>
                     </li>
                     <li class="list-inline-item">
-                       <a href="#">აქსესუარები</a>
+                       <a href="aqsesuarebi.html">აქსესუარები</a>
                     </li>
                 </ul>
              </div>
              <div class="right_side d-flex align-items-center">
                  
                       <div class="kalata">
-                        <a href="#">
+                        <a href="kalata.html">
                         <img src="images/shop.png"><span>კალათა: </span> <span class="packet_item" >2</span>
                         </a>
                       </div>
                       <div class="profile">
-                        <a href="#">
+                        <a href="profili.html">
                        <img src="images/fingerprint.png">
                          <span>პროფილი</span> 
                          </a>
@@ -68,13 +100,13 @@
   <div class="collapse navbar-collapse" id="navb">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)">აქციები</a>
+        <a class="nav-link" href="aqciebi.html">აქციები</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0)">ჩვენს შესახებ</a>
+        <a class="nav-link" href="chvenshesaxeb.html">ჩვენს შესახებ</a>
       </li>
         <li class="nav-item">
-        <a class="active" class="nav-link" href="javascript:void(0)">ინსტრუქცია</a>
+        <a class="active" class="nav-link" href="instruqcia.html">ინსტრუქცია</a>
       </li>
      
     </ul>
@@ -119,7 +151,7 @@
                           </div>
                             <div class="col-md-3 col-sm-2 col-2 item_price_b">
                              <span >
-                                 <sapn class="item_price">20.00</sapn> ₾
+                                 <sapn class="item_price">25.00</sapn> ₾
                              </span>
                           </div>
                             <div class="col-sm-3 col-3">
@@ -129,7 +161,7 @@
                           </div>
                            <div class="col-sm-2 col-2 d-flex align-items-center justify-content-between" >
                              <span >
-                               <span class="item_price_sum" > 20.00 </span>
+                               <span class="item_price_sum" > 25.00 </span>
                                ₾ 
                              </span>
 
@@ -169,7 +201,7 @@
                                <div>მიტანის ღირებულება: <sapn class="shipping">5</sapn> ლარი</div>
 
                                <div >
-                                   სულ ჯამში : <span class="all_items_price">45</span> ₾
+                                   სულ ჯამში : <span class="all_items_price">50</span> ₾
                                </div>
                            </div>
                           
@@ -187,20 +219,25 @@
            </div>
 
            <script type="text/javascript">
+          var itemebisjamuripasi=[]
 
-            function gogo(){
-                 $('.book_item').each(function(){
+//             function gogo(th){
+//                  $('.book_item').each(function(){
                             
-                      var itemPRCE =   Number( $(this).find('.item_price').text() );
-                      var itemPoints=  Number($(this).find('input').val() );
-                      var itemSum =    Number($(this).find('.item_price_sum').text((itemPRCE*itemPoints).toFixed(2)));
-                      var sum =  Number($('.all_items_price').text())
-                            console.log( itemSum )
-                      $('.all_items_price').text(sum=itemPRCE*itemPoints)
-                 });
+//                       var itemPRCE =   Number( .parent('.book_item').find('.item_price').text() );
+//                       var itemPoints=  Number($(this).find('input').val() );
+                   
+//                       var itemSum = $(this).find('.item_price_sum').text((itemPRCE*itemPoints).toFixed(2));
 
+//                       var sum =  Number($('.all_items_price').text())
+//                             console.log( sum )
+//                       $('.all_items_price').text(sum=itemPRCE*itemPoints)
+//                  });
 
-}
+// console.log(itemPRCE)
+
+// }
+
 
 
 
@@ -210,17 +247,28 @@
 </section>
 <footer>
    <script type="text/javascript">
+    
      $('.plus_book').each(function(){
              $(this).click(function(){
 
       var valinp=Number($(this).siblings('input').val())
            $(this).siblings('input').val(valinp+=1)
+
+
+   var item_price_sum=$(this).parents('.book_item').find('.item_price_sum').text();
+   var item_price=$(this).parents('.book_item').find('.item_price').text();
+var all =Number(item_price_sum) + Number(item_price)
+var newsum=item_price_sum*1+item_price*1;
+var allpriceold=$('.all_items_price').text()
+var allpricesum=allpriceold*1+item_price*1
+item_price_sum=$(this).parents('.book_item').find('.item_price_sum').text(newsum.toFixed(2))
            // console.log(valinp)
-            gogo()
-          
+            // gogo()
+            $('.all_items_price').text(allpricesum)
+
+                 });          
      })
 
-     })
 
 
 
@@ -230,8 +278,16 @@
       var valinp=Number($(this).siblings('input').val())
        if(valinp>1){
           $(this).siblings('input').val(valinp-=1)
+           var item_price_sum=$(this).parents('.book_item').find('.item_price_sum').text();
+   var item_price=$(this).parents('.book_item').find('.item_price').text();
+var all =Number(item_price_sum) + Number(item_price)
+var newsum=item_price_sum*1-item_price*1;
+var allpriceold=$('.all_items_price').text()
+var allpricesum=allpriceold*1-item_price*1
+item_price_sum=$(this).parents('.book_item').find('.item_price_sum').text(newsum.toFixed(2))
            // console.log(valinp)
-            gogo()
+            // gogo()
+            $('.all_items_price').text(allpricesum)
          }
 
      })
@@ -242,6 +298,26 @@
      
 
      })
+
+
+$('.delet_itemb').each(function(){
+     $(this).click(function(){
+         // $(this).remove()
+     var thissumprice =  $(this).parents('.book_item').find('.item_price_sum').text();
+
+     var allll=$('.all_items_price').text()
+     var nnnn=allll*1-thissumprice*1;
+     $('.all_items_price').text(nnnn);
+       $(this).parents('.book_item').remove();
+         if($('.book_item ').length <=0){
+         console.log($('.book_item ').length);
+          $('.all_items_price').text(0);
+          $('.shipping').text(0);
+     }
+     })
+   
+})
+     // console.log($('.item_price_sum').text())
  </script>
    <div class="container d-flex justify-content-between">
        <div class="left_side col-md-6">
