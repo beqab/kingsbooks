@@ -1041,7 +1041,148 @@ section.order{
   color: #fff;
 }
 
+
+  #accessories_sider{
+    background: #2E6583;
+    margin-bottom: 70px;
+           img.slider_img{
+                  border-radius: 500px;
+                  left: 50%;
+                  top: 45%;
+                  background: #fff;
+                  height: 270px;
+                  width: 270px;
+
+           }
+           .carousel-caption{
+            position: absolute;
+    left: 3%;
+    top: 26%;
+    text-align: center;
+           }
+           .slider_title{
+            font-size: 15px;
+           }
+           .carousel-caption{
+            display: flex;
+            text-align: left;
+            max-width: 240px;
+
+             .slider_title_continue{
+              font-size: 13px;
+             }
+             .slider_more{
+            color:#F5973B;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 40px;
+            display: inline-block; 
+             }
+           }
+       .left.carousel-control{
+            left: -3%;
+                z-index: 5;
+
+       }
+       .right.carousel-control{
+        right: -5%;
+            z-index: 5;
+       }
+       .buy_accessori{
+        position: relative;
+    max-width: 104px;
+    position: absolute;
+    right: 10%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+              div{
+                color: #F5973B;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: bold;
+              }
+              a{
+                display: inline-block;
+                width: 97px;
+                height: 37px;
+                font-size: 18px;
+                color: $color;
+                border:1px solid #C6C6C6;
+                border-radius: 8px;
+                background: #fff;
+                margin-bottom: 6px;
+
+                 
+              }
+       }
+  }
+#accessories_nav{
+   .navbar-dark .navbar-nav .nav-link{
+      color: $color;
+      display: inline-block;
+      position: relative;
+      transition:0.3s;
+
+        &:hover{
+
+         &:before{
+             display: block;
+         }
+
+        }
+
+         &:before{
+                position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #2e6583;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -36px;
+    left: 50%;
+    z-index: -1;
+    display: none;
+    transition:0.3s;
+              }
+       &.active{
+                
+              &:before{
+              display: block;
+              }
+
+       }
+   }
+   ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+   }
+}
+
+@media only screen and (max-width: 1000px) {
+
+      #accessories_nav .navbar-dark .navbar-nav .nav-link{
+        font-size: 14px;
+      }
+  }
+
 @media only screen and (max-width: 769px) {
+  #accessories_sider .carousel-caption .slider_more{
+    margin-top: 20px;
+  }
+  #accessories_nav .navbar-toggler{
+    margin: auto;
+    color: $color;
+    background: none
+  }
+  #accessories_nav .navbar-dark .navbar-nav .nav-link{
+    margin-bottom: 0px;
+  }
+  #accessories_nav .navbar-dark .navbar-nav .nav-link:before{
+      display: none !important;
+  }
   .navbar-collapse{
   text-align: center;
 
@@ -1050,6 +1191,10 @@ section.order{
       max-width: 222px;
       margin: auto;
     }
+}
+#accessories_sider img.slider_img{
+  width: 200px;
+  height: 200px;
 }
 
 .top_heder_bg ul a {
@@ -1157,84 +1302,50 @@ section.order{
     margin-top: 33px;
     margin-bottom: 140px;
 }
-  }
-
-  #accessories_sider{
-    background: #2E6583;
-    margin-bottom: 70px;
-           img.slider_img{
-                  border-radius: 500px;
-                  left: 50%;
-                  top: 45%;
-                  background: #fff;
-                  height: 270px;
-                  width: 270px;
-
-           }
-           .carousel-caption{
-            position: absolute;
-    left: 3%;
-    top: 26%;
-    text-align: center;
-           }
-           .slider_title{
-            font-size: 15px;
-           }
-           .carousel-caption{
-            display: flex;
-            text-align: left;
-            max-width: 240px;
-
-             .slider_title_continue{
-              font-size: 13px;
-             }
-             .slider_more{
-            color:#F5973B;
-            font-size: 15px;
-            font-weight: bold;
-            margin-top: 40px;
-            display: inline-block; 
-             }
-           }
-       .left.carousel-control{
-            left: -3%;
-
-       }
-       .right.carousel-control{
-        right: -5%;
-       }
-       .buy_accessori{
-        position: relative;
+#accessories_sider .carousel-caption {
+    position: absolute;
+    left: 12%;
+        max-width: 176px;
+    }
+    #accessories_sider .buy_accessori {
+    position: relative;
     max-width: 104px;
     position: absolute;
-    right: 10%;
-    top: 48%;
-    transform: translate(-50%, -50%);
-              div{
-                color: #F5973B;
-                margin-bottom: 10px;
-                font-size: 20px;
-                font-weight: bold;
-              }
-              a{
-                display: inline-block;
-                width: 97px;
-                height: 37px;
-                font-size: 18px;
-                color: $color;
-                border:1px solid #C6C6C6;
-                border-radius: 8px;
-                background: #fff;
-                margin-bottom: 6px;
-
-                 
-              }
-       }
+    right: -7%;
   }
-
+  #accessories_sider .carousel-caption .slider_more{
+    transform:unset !important;
+    position: relative;
+  }
+  }
 
 
   @media only screen and (max-width: 576px) {
+    #accessories_sider .buy_accessori a {
+    display: inline-block;
+    width: 84px;
+    height: 29px;
+    font-size: 15px;
+    color: #336A7E;
+    border: 1px solid #C6C6C6;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 6px;
+}
+#accessories_sider .slider_caption {
+   background: #ffffffc2;
+    border-radius: 10px;
+}
+#accessories_sider .left.carousel-control {
+    left: 2%;
+    }
+    #accessories_sider .carousel-caption {
+    position: absolute;
+    left: 28%;
+    max-width: 139px;
+    font-size: 16px;
+    font-weight: bold;
+  }
 
    .book_item_k{
     flex-direction: column !important;

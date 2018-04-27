@@ -37,6 +37,7 @@
 }
 .carousel-fade .carousel-item.active {
   opacity: 1;
+  z-index: 3;
 }
 
 html,
@@ -159,23 +160,41 @@ body,
   </a>
 </div>
  -->
- <div class="container">
- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+ <div id="accessories_nav" class="container">
+ <nav class="navbar navbar-expand-md  navbar-dark">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-   აქსესუარები სრულად
+   აქსესუარების ფილტრი
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link active" href="#">ჭიქა</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">ბრელოკი</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>    
+        <a class="nav-link" href="#">პენალი</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#">კეპი</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">კალამი</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">რვეული</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">მაისური</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">პოპ-სოქეთი</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#">ჩანთა</a>
+      </li>
     </ul>
   </div>  
 </nav>
@@ -196,7 +215,7 @@ body,
           <div class="slider_caption">
          <h3 class="slider_title">ჭიქა კინგსის სიმბოლიკით</h3>
         <div class="slider_title_continue">გფბნგფკჯბს ნფდჯს ჯბდსიბ დფჯნ იდბფ ბფდს ბიფ სსფგ გრსბ გბ სბ </div>
-        <a class="slider_more" href="">ვრცლად</a>
+        <a class="slider_more" href="">ვრცლად21</a>
       
            </div>
       
@@ -204,7 +223,7 @@ body,
         </div>
            <div class="buy_accessori d-flex  flex-column align-items-center">
             <div><span>20.00</span> ₾</div>
-            <a class="d-flex align-items-center justify-content-center" href="#">ყიდვა</a>
+            <a  class="d-flex buy align-items-center justify-content-center" href="#">ყიდვა4</a>
             <a  class="d-flex align-items-center justify-content-center" href="#"><img src="images/shb.png"></a>
         </div>
        
@@ -215,13 +234,13 @@ body,
           <div class="slider_caption">
          <h3 class="slider_title">ჭიქა კინგსის სიმბოლიკით</h3>
         <div class="slider_title_continue">დაზოგე 8ლარი </div>
-       <a class="slider_more" href="">ვრცლად</a>
+       <a class="slider_more" href="">ვრცლად23</a>
       </div>
     
         </div>
          <div class="buy_accessori d-flex  flex-column align-items-center">
             <div><span>20.00</span> ₾</div>
-            <a class="d-flex align-items-center justify-content-center" href="#">ყიდვა</a>
+            <a  class="d-flex buy align-items-center justify-content-center" href="#">ყიდვა2</a>
             <a  class="d-flex align-items-center justify-content-center" href="#"><img src="images/shb.png"></a>
         </div>
       </div>
@@ -232,13 +251,13 @@ body,
          <h3 class="slider_title">ჭიქა კინგსის სიმბოლიკით
  </h3>
         <div class="slider_title_continue"> წიგნი 32 ლარის ნაცვლად 27 ლარად </div>
-      <a class="slider_more" href="">ვრცლად</a>
+      <a class="slider_more" href="">ვრცლად3</a>
       </div>
         
         </div>
         <div class="buy_accessori d-flex  flex-column align-items-center">
             <div><span>20.00</span> ₾</div>
-            <a class="d-flex align-items-center justify-content-center" href="#">ყიდვა</a>
+            <a  class="buy d-flex align-items-center justify-content-center" href="#">ყიდვა1</a>
             <a  class="d-flex align-items-center justify-content-center" href="#"><img src="images/shb.png"></a>
         </div>
       </div>
@@ -254,7 +273,16 @@ body,
   </div>
 </div>
 </div>
+<!-- <script type="text/javascript">
+  $('.buy').each(function(){
+      $(this).click(function(e){
+    e.preventDefault();
 
+
+      console.log($(this).text())
+      })
+  })
+</script> -->
 <footer>
    <div class="container d-flex justify-content-between">
        <div class="left_side">
