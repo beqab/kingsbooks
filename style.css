@@ -648,7 +648,7 @@ section.profile {
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 15px;
-    padding-left: 60px; }
+    padding-left: 72px; }
 
 section.order {
   color: #336A7E; }
@@ -865,7 +865,63 @@ section.order {
   .balnce_section {
     margin-top: 33px;
     margin-bottom: 140px; } }
-@media only screen and (max-width: 5760px) {
+#accessories_sider {
+  background: #2E6583;
+  margin-bottom: 70px; }
+  #accessories_sider img.slider_img {
+    border-radius: 500px;
+    left: 50%;
+    top: 45%;
+    background: #fff;
+    height: 270px;
+    width: 270px; }
+  #accessories_sider .carousel-caption {
+    position: absolute;
+    left: 3%;
+    top: 26%;
+    text-align: center; }
+  #accessories_sider .slider_title {
+    font-size: 15px; }
+  #accessories_sider .carousel-caption {
+    display: flex;
+    text-align: left;
+    max-width: 240px; }
+    #accessories_sider .carousel-caption .slider_title_continue {
+      font-size: 13px; }
+    #accessories_sider .carousel-caption .slider_more {
+      color: #F5973B;
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 40px;
+      display: inline-block; }
+  #accessories_sider .left.carousel-control {
+    left: -3%; }
+  #accessories_sider .right.carousel-control {
+    right: -5%; }
+  #accessories_sider .buy_accessori {
+    position: relative;
+    max-width: 104px;
+    position: absolute;
+    right: 10%;
+    top: 48%;
+    transform: translate(-50%, -50%); }
+    #accessories_sider .buy_accessori div {
+      color: #F5973B;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold; }
+    #accessories_sider .buy_accessori a {
+      display: inline-block;
+      width: 97px;
+      height: 37px;
+      font-size: 18px;
+      color: #336A7E;
+      border: 1px solid #C6C6C6;
+      border-radius: 8px;
+      background: #fff;
+      margin-bottom: 6px; }
+
+@media only screen and (max-width: 576px) {
   .book_item_k {
     flex-direction: column !important; }
 
@@ -892,7 +948,25 @@ section.order {
     margin-top: 3vw; }
 
   .registration {
-    margin-top: 0px; } }
+    margin-top: 0px; }
+
+  section.profile .order_history_item {
+    padding-left: 13px; }
+
+  section.profile .order_t {
+    margin-left: auto;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 0px; }
+
+  section.profile {
+    margin-top: 34px;
+    margin-bottom: 70px; }
+
+  .order_history_item {
+    margin-bottom: 15px;
+    justify-content: center; } }
 @media only screen and (max-width: 520px) {
   .top_heder_bg ul a {
     font-size: 11px;

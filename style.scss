@@ -895,7 +895,7 @@ section.profile{
           font-weight: bold;
           margin-top: 40px;
           margin-bottom: 15px;
-          padding-left: 60px;
+          padding-left: 72px;
         }
 }
 
@@ -1159,8 +1159,82 @@ section.order{
 }
   }
 
+  #accessories_sider{
+    background: #2E6583;
+    margin-bottom: 70px;
+           img.slider_img{
+                  border-radius: 500px;
+                  left: 50%;
+                  top: 45%;
+                  background: #fff;
+                  height: 270px;
+                  width: 270px;
 
-  @media only screen and (max-width: 5760px) {
+           }
+           .carousel-caption{
+            position: absolute;
+    left: 3%;
+    top: 26%;
+    text-align: center;
+           }
+           .slider_title{
+            font-size: 15px;
+           }
+           .carousel-caption{
+            display: flex;
+            text-align: left;
+            max-width: 240px;
+
+             .slider_title_continue{
+              font-size: 13px;
+             }
+             .slider_more{
+            color:#F5973B;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 40px;
+            display: inline-block; 
+             }
+           }
+       .left.carousel-control{
+            left: -3%;
+
+       }
+       .right.carousel-control{
+        right: -5%;
+       }
+       .buy_accessori{
+        position: relative;
+    max-width: 104px;
+    position: absolute;
+    right: 10%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+              div{
+                color: #F5973B;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: bold;
+              }
+              a{
+                display: inline-block;
+                width: 97px;
+                height: 37px;
+                font-size: 18px;
+                color: $color;
+                border:1px solid #C6C6C6;
+                border-radius: 8px;
+                background: #fff;
+                margin-bottom: 6px;
+
+                 
+              }
+       }
+  }
+
+
+
+  @media only screen and (max-width: 576px) {
 
    .book_item_k{
     flex-direction: column !important;
@@ -1190,6 +1264,26 @@ section.order .pay_method a {
 }
 .registration{
   margin-top: 0px;
+}
+section.profile .order_history_item{
+  padding-left: 13px;
+}
+section.profile .order_t{
+  margin-left: auto;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-left: 0px;
+}
+section.profile {
+    margin-top: 34px;
+    margin-bottom: 70px;
+}
+.order_history_item{
+
+   margin-bottom: 15px;
+  justify-content: center;
+
 }
   }
 
