@@ -175,14 +175,16 @@ header .navbar {
       transform:translate(-50%, -50%);
       font-size: 47px;
       color: #F5973B;
-      left: -16px;
+      left: 0px;
+        z-index: 3;
 
    
      }
      .right.carousel-control{
         position: absolute;
+        z-index: 3;
       top: 50%;
-         right: -41px;
+         right: -24px;
       transform:translate(-50%, -50%);
       font-size: 47px;
       color: #F5973B;
@@ -1327,6 +1329,17 @@ section.order{
 
 
   @media only screen and (max-width: 576px) {
+
+    footer .left_side ul li img{
+       margin-right: 0px;
+    }
+
+
+      .top_header{
+          flex-wrap: wrap;
+    align-items: center;
+    justify-content: center !important;
+    }
     #accessories_sider .buy_accessori a {
     display: inline-block;
     width: 84px;
