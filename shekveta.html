@@ -124,7 +124,7 @@ body,
 
 <section class="order">
   <div class="text-center">
-             <select class="m-auto ct_select">
+             <select class="m-auto ct_select" id="town_selector">
                 <option>ქალაქი</option>
                 <option>თბილისი</option>
                 <option>ქუთაისი</option>
@@ -166,19 +166,17 @@ body,
       <div >
         
           <div class="d-flex mb-2 justify-content-between">
-              * <input class="procent46" type="" placeholder="მშობლის სახელი" name="">
-              * <input class="procent46" type="" placeholder="მშობლის გვარი" name="">
+              * <input class="procent46" type="" placeholder="მშობლის სახელი" name="" id="parent_name">
+              * <input class="procent46" type="" placeholder="მშობლის გვარი" name="" id="parent_lastname">
           </div>
           <div class="d-flex mb-2">
-            * <input style="margin-left: 4px;" class="procent46" type="" placeholder="ტელეფონის ნომერი" name="">
+            * <input style="margin-left: 4px;" class="procent46" type="number" placeholder="ტელეფონის ნომერი" name="" id="mobile_number">
           </div>
             <div class="d-flex mb-3">
-            * <input style="margin-left: 4px;" class="w-100" type="" placeholder="ქუჩა/ბინის ნომერი" name="">
+            * <input style="margin-left: 4px;" class="w-100" type="" placeholder="ქუჩა/ბინის ნომერი" name="" id="address">
           </div>
           <div class="d-flex">
-          <textarea style="margin-left: 10px;" class="w-100" value="კომენტარი">
-            
-            </textarea>
+          <textarea style="margin-left: 10px;" class="w-100" value="კომენტარი" id="comment"></textarea>
           </div>
           <div class="text-right">
              <button class="submit_order">დადასტურება</button>
@@ -192,7 +190,7 @@ body,
 </section>
 <div class="pop_b d_none d-flex flex-column align-items-center justify-content-around">
   <i class=" cancel_pop fas fa-times"></i>
-    <p class="text-center">თქვენს ბალანსზე არა არის საკმარისი თანხა</p>
+    <p class="text-center" id="error_message"></p>
     <a class="text-center d-inline-block" href="#">ბალანსის შევსება</a>
 </div>
 
@@ -255,11 +253,38 @@ body,
 
     $('.submit_order').click(function(e){
         e.preventDefault()
-          if(adgilzeTubalansiT){
-            console.log('blaa')
-              // ბალანსით გადახდისას მოვდივართ აქ
 
-          }
+        var town1=$("#town_selector").val();
+        var name1=$("#parent_name").val();
+        var lastname1=$("#parent_lastname").val();
+        var mobile1=$("#mobile_number").val();
+        var address1=$("#address").val();
+        var comment1=$("#comment").val();
+
+        
+
+    if(name1==""){araasakmarisi("გთხოვთ მიუთითოთ მშობლის სახელი");return;}
+    if(lastname1==""){araasakmarisi("გთხოვთ მიუთითოთ მშობლის გვარი");return;}
+
+    if(mobile1.length!=9){araasakmarisi("ტელეფონის ნომერი 9 ციფრისგან უნდა შედგებოდეს");return;}
+    if(mobile1[0]!='5'){araasakmarisi("ტელეფონის ნომერი 5-ით უნდა იწყებოდეს");return;}
+
+    if(address1==""){araasakmarisi("გთხოვთ შეავსოთ მისამართის ველი");return;}
+
+
+    var pay_type="";
+
+    if(adgilzeTubalansiT){
+      // ბალანსით გადახდისას მოვდივართ აქ
+      pay_type="ბალანსით";
+    }else{
+      pay_type="ადგილზე";
+    }
+
+    $.post('receive_order.php', {town:town1,name:name1,lastname:lastname1,mobile:mobile1,address:address1,comment:comment1,payType:pay_type}, function(data){
+                    if(data=="succ")Success();
+                    else araasakmarisi(data);
+              });
 
     })
 
@@ -271,7 +296,8 @@ body,
     }
 // თანხა არ არის საკმარისი ეშვება
 
-function araasakmarisi(){
+function araasakmarisi(msg){
+   $("#error_message").html(msg);
    $('.pop_b').removeClass('d_none')
 }
 
