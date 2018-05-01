@@ -234,7 +234,7 @@ body,
                 <div class="col-md-3">
                     <div class="book_buy_item">
                        <img src="images/ge1.jpg">
-                       <div class="hoverbg">
+                       <div style="cursor: pointer;" class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
@@ -244,6 +244,7 @@ body,
                      </div>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="book_buy_item">
                        <img src="images/ge1.jpg">
@@ -367,6 +368,12 @@ body,
     </article>
 </section>
 <footer>
+  <!-- რიგნრბის რედირექტი -->
+    <script type="text/javascript">
+                    $('.hoverbg').click(function(){
+                        window.location.replace("http://google.com");
+                    })
+                </script>
    <div class="container d-flex justify-content-between">
        <div class="left_side">
           <ul class="list-unstyled mb-0">

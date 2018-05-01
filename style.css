@@ -194,6 +194,7 @@ header .navbar form button {
     .mane_page_section article .book_buy_item:hover .hoverbg {
       opacity: 1;
       visibility: visible;
+      cursor: pointer;
       transition: 0.3s; }
     .mane_page_section article .book_buy_item .hoverbg {
       position: absolute;
@@ -856,6 +857,13 @@ section.order {
   align-items: center;
   justify-content: space-between;
   font-weight: bold; }
+
+#accessories_sider img.slider_img {
+  transition: 0.3s; }
+
+#accessories_sider img.slider_img:hover {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
+  transform: translate(-50%, -50%) scale(1.05, 1.05); }
 
 @media only screen and (max-width: 1000px) {
   #accessories_nav .navbar-dark .navbar-nav .nav-link {
