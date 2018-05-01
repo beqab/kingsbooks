@@ -276,10 +276,10 @@ body,
 
     if(adgilzeTubalansiT){
       // ბალანსით გადახდისას მოვდივართ აქ
-      pay_type="ბალანსით";
-    }else{
-      pay_type="ადგილზე";
-    }
+              pay_type="ბალანსით";
+          }else{
+              pay_type="ადგილზე";
+          }
 
     $.post('receive_order.php', {town:town1,name:name1,lastname:lastname1,mobile:mobile1,address:address1,comment:comment1,payType:pay_type}, function(data){
                     if(data=="succ")Success();

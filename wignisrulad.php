@@ -24,6 +24,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/jssor.slider.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+
+  <?php
+    $book_id=$_GET["item_id"];
+      if($book_id!="eng"&&$book_id!="engFin"&&$book_id!="geo"&&$book_id!="geoFin"&&$book_id!="geoMass"&&$book_id!="mth"&&$book_id!="mth600"&&$book_id!="mthFin")
+          header('Location:'."index.php");
+
+    require("books_text.php");
+  ?>
+
 <style type="text/css">
 
 
@@ -57,6 +66,12 @@ body,
 
 
 </style>
+
+
+  <script>
+      var item_id="<?php echo $_GET['item_id'];?>";
+  </script>
+
 </head>
 <body>
     <header>
@@ -127,11 +142,11 @@ body,
          <div class="container">
             <div class="row">
                <div class="col-md-auto d-md-block d-flex align-items-start justify-content-between col-12 text-md-left text-center ">
-                   <img class="more_books_img " src="images/bore_book.png">
+                   <img class="more_books_img " src=<?php echo "'book_images/".$_GET["item_id"]."/default.png'"?> id="book_image">
 
                     <div class="d-flex d-md-none align-items-start justify-content-start">
   <div class="d-flex flex-column align-items-center add_block_b">
-    <div class="price"><sapn> 20.00 </sapn> ₾</div>
+    <div class="price"><span> 20.00 </span> ₾</div>
     <div class="add_book">
       <i class="fas fa-minus minus_book"></i> <input value="1" type="" name="" class="book_val"> <i class="fas fa-plus plus_book"></i> 
     </div>
@@ -147,25 +162,21 @@ body,
  </div>
                </div>
                <div class="col-md-6 col-12 book_info">
-                    <h4 >ტესტები ინგლისურ ენაში</h4>
-                    <ul>
-                      <li>წელი :<span> 2018</span></li>
-                      <li>ყდა : <span> რბილი</span></li>
-                      <li>გვერდები :<span> 2018</span></li>
-                      <li>ფორმატი :<span> 2018</span></li>
-                      <li>ISBN :<span> 2018</span></li>
-                    </ul>
-                    <p>
-                      კინგსის ინგლისური ენის  სახელმძღვანელო მოსწავლეთა სურვილებსა და ინტერესებზეა მორგებული. იგი ხელს უწყობს, რომ სწავლა ტმარტივ და სახალისო პროცესად იქცეს, რაც მოზარდებში ენის შესწავლის მოტივაციის ზრდის პროპორციულია. წიგნის მეშვეობით მოსწავლეები შეძლებენ ლოგიკურად დალაგებული თემებისა და სიტყვათა შეთანხმებების მარტივად ათვისებას, მათ დამოუკიდებლად თავმოყრას. 
-                    </p>
+                    <?php
+                      echo get_item_text($_GET["item_id"]);
+                    ?>
                </div>
                <div class="col-md-2 d-none d-md-flex align-items-end ">
  <div class="d-flex align-items-center">
   <div class="d-flex flex-column align-items-center add_block_b">
-    <div class="price"><sapn> 20.00 </sapn> ₾</div>
-    <div class="add_book">
-      <i class="fas fa-minus minus_book"></i> <input value="1" type="" name="" class="book_val"> <i class="fas fa-plus plus_book"></i> 
-    </div>
+      <select id="book_class">
+        <option selected hidden>აირჩიეთ კლასი</option>
+        <option>2 კლასი</option>
+        <option>3 კლასი</option>
+        <option>4 კლასი</option>
+        <option>5 კლასი</option>
+        <option>6 კლასი</option>
+      </select> 
     <a class="buy_b" href=""> ყიდვა </a>
     <a href="" class="add_b d-flex align-items-center">
        <img src="images/shb.png">
@@ -178,6 +189,12 @@ body,
  </div>
 
  <script type="text/javascript">
+      $('#book_class').on('change', function() {
+         $("#book_image").attr("src","book_images/"+item_id+"/"+this.value+".png");
+         console.log("book_images/"+item_id+"/"+this.value+".png");
+      })
+
+
      $('.plus_book').click(function(){
 
       var valinp=Number($('.book_val').val())
