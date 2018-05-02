@@ -27,7 +27,11 @@
 <style type="text/css">
 
 
+<?php
+  session_start();
+  if(isset($_SESSION["kalata"])==0)$_SESSION["kalata"]=[];
 
+?>
 
 .carousel-fade .carousel-item {
   display: block;
@@ -65,7 +69,7 @@ body,
              <div class="left_side">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                       <a class="active" href="index.html">წიგნები</a>
+                       <a class="active" href="index.php">წიგნები</a>
                     </li>
                     <li class="list-inline-item">
                        <a href="aqsesuarebi.html">აქსესუარები</a>
@@ -232,40 +236,37 @@ body,
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=geo';">
                        <img src="book_images/geo/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
-                          <img src="images/plop.png">
+                        <br><br>
+                            <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=geo">ყიდვა</a>  
-                          <a class="add" href="wignisrulad.php?item_id=geo">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=geoFin';">
                        <img src="book_images/geoFin/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=geoFin">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=geoFin">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
                 </div>
              <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=geoMass';">
                        <img src="book_images/geoMass/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=geoMass">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=geoMass">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
@@ -278,40 +279,37 @@ body,
         <div class="container">
             <div class="row">
                <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=mth';">
                        <img src="book_images/mth/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=mth">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=mth">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
                 </div>
               <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=mthFin';">
                        <img src="book_images/mthFin/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=mthFin">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=mthFin">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=mth600';">
                        <img src="book_images/mth600/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=mth600">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=mth600">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
@@ -324,27 +322,25 @@ body,
         <div class="container">
             <div class="row">
               <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=eng';">
                        <img src="book_images/eng/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=eng">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=eng">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="book_buy_item">
+                    <div class="book_buy_item" onclick="document.location='wignisrulad.php?item_id=engFin';">
                        <img src="book_images/engFin/default.png" width="148" height="211">
                        <div class="hoverbg">
                        <div  class="d-flex flex-column align-items-center hover_block">
+                          <br><br>
                           <img src="images/plop.png">
                           <span><span>20.00</span>₾</span>
-                          <a class="buy" href="wignisrulad.php?item_id=engFin">ყიდვა</a>
-                          <a class="add" href="wignisrulad.php?item_id=engFin">კალათაში დამატება</a>
                        </div>
                      </div>
                     </div>

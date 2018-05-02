@@ -24,6 +24,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/jssor.slider.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+<?php
+    $_SESSION["buy_now"]=0;
+?>
+
+
 <style type="text/css">
 
 

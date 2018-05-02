@@ -59,6 +59,9 @@ body,
 </style>
 </head>
 <body>
+  <?php
+  session_start();
+  ?>
     <header>
         <div class="top_heder_bg">
              <div class="top_header d-flex align-items-center justify-content-between container" >

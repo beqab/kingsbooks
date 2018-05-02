@@ -26,6 +26,8 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
   <?php
+  session_start();
+
     $book_id=$_GET["item_id"];
       if($book_id!="eng"&&$book_id!="engFin"&&$book_id!="geo"&&$book_id!="geoFin"&&$book_id!="geoMass"&&$book_id!="mth"&&$book_id!="mth600"&&$book_id!="mthFin")
           header('Location:'."index.php");
@@ -80,7 +82,7 @@ body,
              <div class="left_side">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                       <a class="active" href="index.html">წიგნები</a>
+                       <a class="active" href="index.php">წიგნები</a>
                     </li>
                     <li class="list-inline-item">
                        <a href="aqsesuarebi.html">აქსესუარები</a>
@@ -150,10 +152,10 @@ body,
     <div class="add_book">
       <i class="fas fa-minus minus_book"></i> <input value="1" type="" name="" class="book_val"> <i class="fas fa-plus plus_book"></i> 
     </div>
-    <a class="buy_b" href=""> ყიდვა </a>
+    <a class="buy_b"> ყიდვა </a>
     <a href="" class="add_b d-flex align-items-center">
        <img src="images/shb.png">
-       <span class="text-center">
+       <span class="text-center" >
       კალათაში <br>
               დამატება </span>  </a>
   </div>
@@ -177,8 +179,8 @@ body,
         <option>5 კლასი</option>
         <option>6 კლასი</option>
       </select> 
-    <a class="buy_b" href=""> ყიდვა </a>
-    <a href="" class="add_b d-flex align-items-center">
+    <a class="buy_b" style="cursor:pointer;" id="buying_item"> ყიდვა </a>
+    <a class="add_b d-flex align-items-center" id="add_to_kalata" style="cursor:pointer;">
        <img src="images/shb.png">
        <span class="text-center">
       კალათაში <br>
@@ -189,9 +191,26 @@ body,
  </div>
 
  <script type="text/javascript">
+      $("#add_to_kalata").click(function(e){
+          if($("#book_class").val()=="აირჩიეთ კლასი"){alert("გთხოვთ აირჩიოთ კლასი");return;}
+
+          $.post('update_kalata.php', {buy_now:0,itemId:item_id,item_comment:$("#book_class").val()}, function(data){
+             if(data=="succ")location.href="wignisrulad.php?item_id="+item_id;
+              else alert("დაფიქსირდა შეცდომა");
+          });
+
+      })
+
+      $('#buying_item').click(function(e){
+          if($("#book_class").val()=="აირჩიეთ კლასი"){alert("გთხოვთ აირჩიოთ კლასი");return;}
+          $.post('update_kalata.php', {buy_now:1,itemId:item_id,item_comment:$("#book_class").val()}, function(data){
+              if(data=="succ")location.href="shekveta.php";
+              else alert("დაფიქსირდა შეცდომა");
+          });
+      })
+
       $('#book_class').on('change', function() {
          $("#book_image").attr("src","book_images/"+item_id+"/"+this.value+".png");
-         console.log("book_images/"+item_id+"/"+this.value+".png");
       })
 
 
